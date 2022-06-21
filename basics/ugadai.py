@@ -22,4 +22,5 @@ if contin == 'да':
             print(f'Количество попыток: {tries}')
             contin = input(f'\n{name}, хочешь сыграть в игру "Угадай число"? (да / нет)\n').lower()
             tries = 0
+            num = randint(1, 10)
 
