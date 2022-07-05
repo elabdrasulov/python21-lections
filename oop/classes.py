@@ -57,3 +57,38 @@ print(person1)
 
 person2 = Person("Жаркынай", 15)
 print(person2)
+
+
+"Атрибуты класса"
+# переменные внутри класса
+
+"Методы класса"
+# функции внутри класса
+
+"Объекты класса"
+# объект, экземпляр instance класса - объект, созданный по шаблону класса (он перенимает все атрибуты и методы класса)
+
+"Атрибуты и методы объекта"
+# атрбиуты и методы, которые есть у объекта, но возможно их нет у класса
+
+class A:
+    var1 = 'переменная класса'
+    
+    def __init__(self):
+        self.var2 = "переменная объекта"
+
+print(dir(A))
+# ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'var1']
+
+obj = A()
+print(dir(obj))
+# ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__var1', '__subclasshook__', '__weakref__', 'var1', 'var2']
+
+print(A.var1)  # 'переменная класса'
+# print(A.var2)  # AttributeError: type object 'A' has no attribute 'var2'
+
+print(obj.var1) # 'переменная класса'
+print(obj.var2) # 'переменная обьекта'
+ 
+"Класс имеет доступ только к атрибутам класса"
+"Объект имеет доступ и к атрибутам класса и к атрибутам самого объекта"
